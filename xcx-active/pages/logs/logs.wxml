@@ -1,0 +1,14 @@
+<view class="container">
+    <view>=======获取用户信息=======</view>
+    <view>昵称：{{nickName}}</view>
+    <image src="{{avatarUrl}}" class="headImg"></image>
+    <view>性别：{{gender==1?"男":"女"}}</view>
+    <view>省份：{{province}}</view>
+    <view>城市：{{city}}</view>
+    <view>国家：{{country}}</view>
+    <view>=======获取位置=======</view>
+    <view>精度：{{latitude}}</view>
+    <view>维度：{{longitude}}</view>
+    <view>速度，浮点数，单位m/s：{{speed}}</view>
+    <view>位置的精确度：{{accuracy}}</view>
+</view>

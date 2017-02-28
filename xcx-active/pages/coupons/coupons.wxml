@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="coupons-tab">
+    <text class="{{isReceive ? 'on' : ''}}" bindtap="receiveTabFn">已领优惠券</text>
+    <text class="{{isReceive ? '' : 'on'}}" bindtap="unreceiveTabFn">全部优惠券</text>
+  </view>
+  <view class="coupons-wrap receive" hidden="{{!isReceive}}">
+    <button disabled="flase" class="coupons" wx:for="{{receiveData}}" wx:key="i">
+      <text class="quota">￥{{item.quota}}</text>
+      <text class="requirement">{{item.requirement}}</text>
+    </button>
+  </view>
+  <view class="coupons-wrap unreceive" hidden="{{isReceive}}">
+    <button class="coupons" wx:for="{{unreceiveData}}" wx:key="i" bindtap="unreceiveFn">
+      <text class="quota">￥{{item.quota}}</text>
+      <text class="requirement">{{item.requirement}}</text>
+    </button>
+  </view>
+</view>

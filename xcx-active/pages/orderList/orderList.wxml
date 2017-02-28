@@ -1,0 +1,55 @@
+<view class="container">
+  <view class="order-tabBar">
+    <text class="{{ispaid ? 'on' : ''}}" bindtap="switchPaidFn">未支付</text>
+    <text class="{{ispaid ? '' : 'on'}}" bindtap="switchUnPaidFn">已支付</text>
+  </view>
+
+  <!--未支付-->
+  <view class="order-paid" hidden="{{!ispaid}}">
+    <view class="order-list">
+      <view class="order-head">
+        <text class="order-status">未支付</text>
+        <view class="order-price">共1件 合计：
+            <text class="totail-price">￥78.00</text>
+        </view>
+      </view>
+      <view class="order-con">
+        <image src="../../images/list1.jpg"></image>
+        <view class="order-info">
+          <text class="order-tit ellipsis">【爱种网】葵花种子【爱种网】葵花种子【爱种网】葵花种子【爱种网】葵花种子</text>
+          <text class="order-pro ellipsis2">由 河北双星种业股份有限公司 提供发货和售后</text>
+          <view class="peice-wrap">
+            <text class="weight">500g/袋</text>
+            <text class="num">x1</text>
+            <text class="price">￥88.00</text>
+          </view>
+        </view>
+      </view>
+      <view class="order-work">
+        <button class="order-cancle">取消订单</button>
+        <button class="order-payment">立即支付</button>
+      </view>
+    </view>
+  </view>
+
+  <!--已支付-->
+  <view class="order-unpaid" hidden="{{ispaid}}">
+    <view class="order-list">
+      <view class="order-head">
+        <text class="order-status paid-status">已支付</text>
+      </view>
+      <view class="order-con">
+        <image src="../../images/list1.jpg"></image>
+        <view class="order-info">
+          <text class="order-tit ellipsis">【爱种网】葵花种子【爱种网】葵花种子【爱种网】葵花种子【爱种网】葵花种子</text>
+          <text class="order-pro ellipsis2">由 河北双星种业股份有限公司 提供发货和售后</text>
+          <view class="peice-wrap">
+            <text class="weight">500g/袋</text>
+            <text class="num">x1</text>
+            <text class="price">￥88.00</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

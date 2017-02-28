@@ -1,0 +1,15 @@
+<view class="container">
+  <radio-group class="radio-group">
+    <view class="addr-list" wx:for="{{addrData}}" wx:key="i">
+      <label class="select-icon">
+        <radio checked="{{item.defalut}}" name="radio"></radio>
+      </label>
+      <view>
+        <text>{{item.userName}}</text>
+        <text class="ellipsis">{{item.userAddr}}</text>
+      </view>
+      <text class="edit-addr" bindtap="editorFn"></text>
+    </view>
+  </radio-group>
+  <button class="newedit-btn" bindtap="creatAddrFn">添加新地址</button>
+</view>

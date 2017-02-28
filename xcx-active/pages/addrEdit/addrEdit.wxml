@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="info-list postman">
+    <text>收货人</text>
+    <input placeholder="请输入收货人姓名" />
+  </view>
+  <view class="info-list">
+    <text>联系电话</text>
+    <input placeholder="请输入收货人的联系电话" />
+  </view>
+  <view class="info-list area">
+    <text>省/直辖市</text>
+    <picker>
+      <view class="picker-province" wx:for="{{provinceData}}" wx:key="i">{{item.province}}</view>
+    </picker>
+  </view>
+  <view class="info-list">
+    <text>市区</text>
+    <picker>
+      <view class="picker-city" wx:for="{{cityData}}" wx:key="i">{{item.city}}</view>
+    </picker>
+  </view>
+  <view class="info-list">
+    <text>区县</text>
+    <picker>
+      <view class="picker-area" wx:for="{{areaData}}" wx:key="i">{{item.area}}</view>
+    </picker>
+  </view>
+  <view class="info-list">
+    <text>详细地址</text>
+    <input placeholder="请输入收货人的详细地址" />
+  </view>
+  <button class="seve-btn">保存并使用</button>
+</view>
+<view class="section">
+</view>

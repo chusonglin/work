@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="addr-opt" bindtap="addrOptFn">选择收货地址</view>
+
+  <!--订单列表-start-->
+  <view class="order-con">
+    <image src="{{img?img:defauliImg}}"></image>
+    <view class="order-info">
+      <text class="order-tit ellipsis">{{name}}</text>
+      <text class="order-pro ellipsis2">{{companyName}}</text>
+      <view class="peice-wrap">
+        <text class="weight">{{norm}}/{{units}}</text>
+        <text class="num">x{{moq}}</text>
+        <text class="price">￥{{retailPrice}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="coupon" bindtap="couponsOptFn">
+      <text>优惠券</text>
+      <text class="coupon-used">已使用{{coupon}}元优惠券</text>
+  </view>
+  
+  <view class="order-settlement">
+    <view class="price-wrap">
+      <text>订单金额</text>
+      <text class="settlement-price">{{retailPrice * moq}}</text>
+    </view>
+    <view class="price-wrap">
+      <text>优惠券</text>
+      <text class="settlement-coupon">-￥{{coupon}}</text>
+    </view>
+    <view class="price-wrap">
+      <text>运费</text>
+      <text class="settlement-freight">+￥{{freight}}</text>
+    </view>
+    <view class="tatail-price">
+        共1件，合计：￥ 
+        <text>{{retailPrice * moq - coupon + freight}}</text>
+    </view>
+  </view>
+  <button class="payment-btn">微信支付</button>
+</view>
